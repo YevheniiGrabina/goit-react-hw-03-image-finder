@@ -88,7 +88,7 @@ export default class App extends PureComponent {
     return (
       <>
         <Searchbar onSubmit={this.handleFormSubmit} />
-        {status === 'idle' && <h1></h1>}
+        {status === 'idle' && <h1>Enter your search query</h1>}
         {status === 'pending' && <LoaderSpinner />}
 
         {status === 'resolved' && (
