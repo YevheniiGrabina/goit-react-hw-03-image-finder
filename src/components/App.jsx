@@ -1,4 +1,4 @@
-import { PureComponent } from 'react';
+import { Component } from 'react';
 import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css';
 import Searchbar from './Searchbar/Searchbar';
 import fetchGallery from './fetchAPI';
@@ -8,7 +8,7 @@ import Button from './Button/Button';
 import Modal from './Modal/Modal';
 import LoaderSpinner from './LoaderSpinner/LoaderSpinner';
 
-export default class App extends PureComponent {
+export default class App extends Component {
   state = {
     gallery: [],
     query: '',
@@ -42,7 +42,7 @@ export default class App extends PureComponent {
     }
 
     window.scrollBy({
-      top: document.body.clientHeight,
+      top : document.body.clientHeight,
       behavior: 'smooth',
     });
   }
@@ -88,7 +88,6 @@ export default class App extends PureComponent {
     return (
       <>
         <Searchbar onSubmit={this.handleFormSubmit} />
-        {status === 'idle' && <h1>Enter your search query</h1>}
         {status === 'pending' && <LoaderSpinner />}
 
         {status === 'resolved' && (

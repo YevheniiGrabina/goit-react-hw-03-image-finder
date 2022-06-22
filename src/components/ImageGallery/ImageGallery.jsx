@@ -22,7 +22,7 @@ class ImageGallery extends Component {
   }
 }
 ImageGallery.propTypes = {
-  galleryItem: PropTypes.shape({ id: PropTypes.number.isRequired }),
+  gallery: PropTypes.shape({ id: PropTypes.number.isRequired }),
 };
 
 export default ImageGallery;
